@@ -5,6 +5,7 @@ import './Login.scss';
 
 class Login extends Component {
     componentWillMount() {
+        console.log(this.props)
     }
     handleSubmit = (e) => {
         e.preventDefault();
@@ -12,7 +13,10 @@ class Login extends Component {
           if (!err) {
             let { username, password} = values;
             let res = await auth.login({username, password});
-            console.log(res);
+            if(res.code === 0) {
+                localStorage.setItem('token', res.token);
+                this.props.history.push('/home');
+            }
           }
         });
     }
