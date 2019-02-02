@@ -1,5 +1,6 @@
 ##### 添加依赖
 - UI组件 ant-design。按需加载 参考antd文档
+    - 修改默认样式，根据css权重高
 - 使用node-scss 参考create-react-app文档
 - 前端权限管理
     - 路由4.x权限控制方法
