@@ -13,9 +13,7 @@ class Index extends Component {
     state = {
     }
     render() {
-        // let { routes, headerData } = this.props
-        // console.log(this.props)
-        // let { tabs } = headerData
+        let { routes } = this.props;
         return (
             <Layout style={{ minHeight: '100vh'}}>
                 <MySider />
@@ -23,7 +21,7 @@ class Index extends Component {
                     <MyHeader />
                     <Content style={{ margin: '0 16px' }}>
                         <Crumbs />
-                        <MyMain />
+                        <MyMain routes={ routes } />
                     </Content>
                     <MyFooter />
                 </Layout>

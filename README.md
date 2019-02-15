@@ -3,6 +3,7 @@
 - UI组件 ant-design。按需加载 参考antd文档
     - 修改默认样式，根据css权重高
 - 使用node-scss 参考create-react-app文档
+- 参考搭建后台管理系统：https://www.jianshu.com/p/c0ba97f2b6a1
 - 前端权限管理
     - 路由4.x权限控制方法
         - 匹配路由完成后进入页面，在每个页面的componentWillMount（此时render方法没执行，页面未渲染）生命周期方法中验证是否有token，没有就跳转登录，比较麻烦
