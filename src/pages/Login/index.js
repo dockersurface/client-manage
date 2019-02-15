@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, Icon } from 'antd';
 import auth from '../../api/auth';
-import './Login.scss';
+import './index.scss';
 
 class Login extends Component {
     componentWillMount() {
@@ -15,7 +15,7 @@ class Login extends Component {
             let res = await auth.login({username, password});
             if(res.code === 0) {
                 localStorage.setItem('token', res.token);
-                this.props.history.push('/home');
+                this.props.history.push('/');
             }
           }
         });

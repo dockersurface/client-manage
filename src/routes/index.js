@@ -1,22 +1,40 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from '../pages/User/Login';
-import Home from '../pages/Home'; // 需要验证是否有token才能进入
-import RequireAuth from './RequireAuth'; // 路由权限验证方法：1.封装私有组件 2.高阶组件
-import NoMatch from '../pages/NoMatch'; // 输入路径不匹配时显示
+import { Login, Register, Index } from './toComponent';
 
-class Routers extends Component {
-    render () {
-        return(
-            <Router>
-                <Switch>
-                    <Route exact path='/' component={Login} />
-                    <RequireAuth path='/home' component={Home} />
-                    <Route component={NoMatch} />
-                </Switch>
-            </Router>
-        )
+export const menus = [
+    {
+        path: ''
     }
-}
+]
 
-export default Routers;
+export const main = [
+    {
+        path: '/login',
+        exact: true,
+        name: '登录',
+        component: Login,
+        meta: {
+            isAuth: true
+        }
+    },
+    {
+        path: '/register',
+        exact: true,
+        name: '注册',
+        component: Register,
+        meta: {
+            isAuth: true
+        }
+    },
+    {
+        path: '/',
+        exact: true,
+        name: '首页',
+        Redirect: '/index' 
+    },
+    {
+        path: '/index',
+        name: '首页',
+        component: Index,
+        routes: menus
+    }
+]
