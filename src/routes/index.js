@@ -1,5 +1,4 @@
 import React from 'react';
-import { Login, Register, Index } from './toComponent';
 const User = () => <div><h3>User</h3></div>
 const UserList = () => <h3>UserList</h3>
 const Team = () => <h3>Team</h3>
@@ -21,6 +20,7 @@ export const menus = [
     { 
         path: '/team',
         name: 'Team',
+        exact: true,
         icon: 'team',
         component: Team 
     },
@@ -32,30 +32,30 @@ export const menus = [
     },
 ]
 
-export const main = [
-    {
-        path: '/login',
-        exact: true,
-        name: '登录',
-        component: Login,
-        meta: {
-            isAuth: true
-        }
-    },
-    {
-        path: '/register',
-        exact: true,
-        name: '注册',
-        component: Register,
-        meta: {
-            isAuth: true
-        }
-    },
-    {
-        path: '/',
-        exact: true,
-        name: '首页',
-        component: Index,
-        routes: menus
-    }
-]
+// export const main = [
+//     {
+//         path: '/login',
+//         exact: true,
+//         name: '登录',
+//         component: Login,
+//         meta: {
+//             isAuth: true
+//         }
+//     },
+//     {
+//         path: '/register',
+//         exact: true,
+//         name: '注册',
+//         component: Register,
+//         meta: {
+//             isAuth: true
+//         }
+//     },
+//     {
+//         path: '/',
+//         // exact: true,
+//         name: '首页',
+//         component: Index,
+//         // routes: menus
+//     }
+// ]

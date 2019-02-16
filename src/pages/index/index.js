@@ -7,13 +7,14 @@ import MyFooter from '../../layouts/Footer';
 // import MyTabs  from '../components/Tabs.js'
 import MySider  from '../../layouts/Sider';
 import './index.scss';
+import { menus } from '../../routes/index';
 const { Content } = Layout;
 
 class Index extends Component {
     state = {
     }
     render() {
-        let { routes } = this.props;
+        // let { routes } = this.props;
         return (
             <Layout style={{ minHeight: '100vh'}}>
                 <MySider />
@@ -21,7 +22,7 @@ class Index extends Component {
                     <MyHeader />
                     <Content style={{ margin: '0 16px' }}>
                         <Crumbs />
-                        <MyMain routes={ routes } />
+                        <MyMain routes={ menus } />
                     </Content>
                     <MyFooter />
                 </Layout>

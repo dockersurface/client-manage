@@ -14,3 +14,6 @@
 - react-content-loader骨架屏
 - redux (https://juejin.im/post/5b755537e51d45661d27cdc3#heading-2)使用原生 Redux，一个常见的请求处理如下。非常冗余，这是 Redux 被很多人诟病的原因
 - 首页布局：参考antd文档侧边布局
+
+#### 遇到问题
+- 使用嵌套路由在父级不能用exact， 因为当你匹配路由时路径加了子路由，导致父级路由路径不匹配从而父子组件都显示不了
