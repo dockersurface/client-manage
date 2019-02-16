@@ -53,6 +53,7 @@ export const main = [
     },
     {
         path: '/',
+        exact: true,
         name: '首页',
         component: Index,
         routes: menus
